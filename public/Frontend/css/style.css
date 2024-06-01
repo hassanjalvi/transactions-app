@@ -1,0 +1,62 @@
+/* adminheader.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide the sidebar initially */
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: left 0.3s ease; /* Smooth transition */
+}
+
+.sidebar.open {
+    left: 0; /* Open the sidebar */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.sidebar-heading {
+    padding: 10px 15px;
+    color: #FF4F02; /* Updated color */
+    font-size: 24px;
+    text-align: center;
+}
+
+.main {
+    margin-left: 0; /* Adjust main content margin when sidebar is closed */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+.main.open {
+    margin-left: 250px; /* Adjust main content margin when sidebar is open */
+}
+
+.open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    color: #FF4F02;
+    font-size: 24px;
+}
